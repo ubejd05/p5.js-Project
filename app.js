@@ -3,7 +3,7 @@ let wave = 3; //  min 0
 let angle = 60;  // max 320, min 2
 let size = 3;  // max 4, min 1
 let speed = 3;  // max 20, min 0
-let spiral = 100;  // min 1, nese statike pakufi, nese levizese max 500
+let rotation = 100;  // min 1, ///nese statike pakufi\\\, nese levizese max 500
 // let rrethiVogelMes = 0;  //1 ose 0
 
 // me  qit rrotullim statik edhe levizes
@@ -33,7 +33,7 @@ function draw() {
 
       stroke(r,g,b)
       
-      rotate(frameCount / spiral)  //nese e hekim "frameCount / " eshte statike
+      rotate(frameCount / rotation)  //nese e hekim "frameCount / " eshte statike
 
 
       beginShape();
