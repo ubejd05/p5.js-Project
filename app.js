@@ -1,7 +1,7 @@
 let circles = 50; // max 100, min 10
 let wave = 3; //  min 0
 let angle = 60;  // max 320, min 2
-let size = 3;  // max 4, min 1
+let size = 4;  // max 5, min 1
 let speed = 3;  // max 20, min 0
 let rotation = 100;  // min 1, ///nese statike pakufi\\\, nese levizese max 500
 // let rrethiVogelMes = 0;  //1 ose 0
@@ -13,7 +13,7 @@ let myCanvas = document.getElementById("myCanvas")
 // myCanvas.style.backgroundColor = "red";
 
 function setup() {
-   createCanvas(500, 400, WEBGL).parent("canvas");
+   createCanvas(700, 600, WEBGL).parent("canvas");
    angleMode(DEGREES);
 }
 
