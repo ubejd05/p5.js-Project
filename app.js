@@ -9,20 +9,19 @@
 // me  qit rrotullim statik edhe levizes
 // me qit rbg ose joRBG
 
-
 let circles = Number(document.getElementById("circles").value);
 let wave = Number(document.getElementById("wave").value);
 let angle = Number(document.getElementById("angle").value);
 let size = Number(document.getElementById("size").value);
 let speed = Number(document.getElementById("speed").value);
-let rotation = Number(document.getElementById("rotation").value)
+let rotation = Number(document.getElementById("rotation").value);
 
-let inputs = document.querySelectorAll("input")
-let reset = document.getElementById("reset")
+let inputs = document.querySelectorAll("input");
+let reset = document.getElementById("reset");
 
-reset.addEventListener("click", (event) =>{
-   location.reload()
-})
+reset.addEventListener("click", (event) => {
+   location.reload();
+});
 // console.log(inputs);
 
 inputs.forEach((input) => {
@@ -36,11 +35,7 @@ inputs.forEach((input) => {
    });
 });
 
-
-
-
-
-let myCanvas = document.getElementById("myCanvas")
+let myCanvas = document.getElementById("myCanvas");
 // myCanvas.style.backgroundColor = "red";
 
 function setup() {
@@ -57,19 +52,17 @@ function draw() {
    stroke(255);
 
    for (let i = 0; i < circles; i++) {
-
       let r = map(sin(frameCount), -1, 1, 0, 255);
-      let g = map(i, 0, circles, 0, 255)
-      let b = map(cos(frameCount), -1, 1, 255, 0)
+      let g = map(i, 0, circles, 0, 255);
+      let b = map(cos(frameCount), -1, 1, 255, 0);
 
-      stroke(r,g,b)
-      
-      rotate(frameCount / rotation)  //nese e hekim "frameCount / " eshte statike
+      stroke(r, g, b);
 
+      rotate(frameCount / rotation); //nese e hekim "frameCount / " eshte statike
 
       beginShape();
       for (let j = 0; j <= 360; j += angle) {
-         let rad = i * size;   //  + rrethiVogelMes
+         let rad = i * size; //  + rrethiVogelMes
          let x = rad * cos(j);
          let y = rad * sin(j);
          let z = sin(frameCount * speed + i * wave) * 50;
